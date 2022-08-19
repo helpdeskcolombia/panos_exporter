@@ -15,7 +15,7 @@ FROM scratch
 
 COPY --from=builder /app/build/panos_exporter /
 # Añadir un archivo de configuracion
-COPY go.mod go.sum ./
+COPY panos_exporter.yaml ./
 
 EXPOSE 9654
 ENTRYPOINT ["/panos_exporter --config.file=panos_exporter.yaml"]
