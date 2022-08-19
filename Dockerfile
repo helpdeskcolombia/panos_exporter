@@ -16,4 +16,4 @@ FROM scratch
 COPY --from=builder /app/build/panos_exporter /
 
 EXPOSE 9654
-ENTRYPOINT ["/panos_exporter"]
+ENTRYPOINT ["/panos_exporter --config.file=panos_exporter.yaml"]
