@@ -18,4 +18,5 @@ COPY --from=builder /app/build/panos_exporter /
 COPY panos_exporter.yaml ./
 
 EXPOSE 9654
-ENTRYPOINT ["/panos_exporter --config.file=panos_exporter.yaml"]
+#ENTRYPOINT ["/panos_exporter --config.file=panos_exporter.yaml"]
+ENTRYPOINT ["/panos_exporter"]
